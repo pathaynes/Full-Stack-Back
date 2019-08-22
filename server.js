@@ -32,8 +32,8 @@ app.get('/api/turtles', (req, res) => {
         animaltype,
         url,
         weapon,
-        hero,
-    FROM turtles
+        hero
+    FROM tmnt;
 
     `)
         .then(result => {
