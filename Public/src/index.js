@@ -1,4 +1,6 @@
-import App from './components/app/App.js';
+import App from './components/app/app.js';
 
+const root = document.getElementById('root');
 const app = new App();
-document.body.prepend(app.renderDOM());
+
+root.prepend(app.renderDOM());

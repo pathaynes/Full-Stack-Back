@@ -9,7 +9,7 @@ class Component {
     onRender(/*dom*/) {
 
     }
-    rendorDOM() {
+    renderDOM() {
         const html = this.renderHTML();
         if(typeof(html) !== 'string') {
             throw new Error(`Component "${this.constructor.name}" needs to return an HTML string from renderHTML`); 
