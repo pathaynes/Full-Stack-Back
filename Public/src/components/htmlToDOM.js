@@ -12,3 +12,4 @@ function htmlToDOM(html) {
 }
 
 export default htmlToDOM;
+
