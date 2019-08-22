@@ -12,7 +12,7 @@ class Component {
     rendorDOM() {
         const html = this.renderHTML();
         if(typeof(html) !== 'string') {
-            throw new Error(`Component "${this.constructor.name}" needs to return an HTML string from renderHTML`);
+            throw new Error(`Component "${this.constructor.name}" needs to return an HTML string from renderHTML`); 
         }
         const dom = htmlToDom(html);
 
