@@ -1,11 +1,16 @@
 import Component from '../Component.js';
 import Header from './Header.js';
+import Halfshell from './halfshell.js';
 
 class App extends Component {
     
     onRender(dom) {
         const header = new Header();
         dom.prepend(header.renderDOM());
+
+        const halfshell = new Halfshell({ turtle: [] });
+        const main = dom.querySelector('main');
+        main.appendChild(halfshell.renderDOM());
     }
 
     renderHTML() {
@@ -14,7 +19,7 @@ class App extends Component {
             <!-- header goes here -->
             <main>
                <p>TURTLE POWER</p>
-            <main>
+            </main>
         <div>   
      `;
     }
