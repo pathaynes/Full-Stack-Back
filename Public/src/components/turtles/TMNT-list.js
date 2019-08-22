@@ -4,8 +4,7 @@ import Turtle from './turtle.js';
 class TMNTlist extends Component {
     
     onRender(dom) {
-        const tmnt = this.props.turtle;
-        console.log(this.props);
+        const tmnt = this.props.turtles;
         tmnt.forEach(tmnt => {
             const props = { turtle: tmnt };
             const turtleItem = new Turtle(props);
