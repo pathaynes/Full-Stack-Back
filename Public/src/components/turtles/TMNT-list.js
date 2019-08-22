@@ -1,11 +1,11 @@
 import Component from '../Component.js';
-import Turtle from '../app/turtle.js';
+import Turtle from './turtle.js';
 
-class Halfshell extends Component {
+class TMNTlist extends Component {
     
     onRender(dom) {
-        const tmnt = this.props.tmnt;
-        console.log(tmnt);
+        const tmnt = this.props.turtle;
+        console.log(this.props);
         tmnt.forEach(tmnt => {
             const props = { turtle: tmnt };
             const turtleItem = new Turtle(props);
@@ -23,4 +23,4 @@ class Halfshell extends Component {
     }
 }
 
-export default Halfshell;
+export default TMNTlist;

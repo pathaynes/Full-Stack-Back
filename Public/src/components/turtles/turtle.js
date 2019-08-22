@@ -3,7 +3,7 @@ import Component from '../Component.js';
 class Turtle extends Component {
 
     renderHTML() {
-        const tmnt = this.props.tmnt;
+        const tmnt = this.props.turtle;
         return /*html*/`
     <li>
         <h2>${tmnt.name}</h2>

@@ -24,7 +24,7 @@ app.use(morgan());
 app.use(express.static('public'));
 
 
-app.get(' /*turtles ', (req, res) => {
+app.get('/api/turtles', (req, res) => {
     client.query(`
     SELECT
         id,
