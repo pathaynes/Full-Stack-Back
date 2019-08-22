@@ -5,7 +5,7 @@ module.exports = [
         hero: true,
         animaltype: 'Rat',
         weapon: 'Cane',
-        url: ,
+        url: 'assets/tmnt/Master-Splinter.jpg',
     },
     {    
         id: 2,
@@ -13,7 +13,7 @@ module.exports = [
         hero: true,
         animaltype: 'Turtle',
         weapon: 'Katana',
-        url: ,
+        url: 'assets/tmnt/Leonardo.jpg',
     },   
     {        
         
@@ -22,7 +22,7 @@ module.exports = [
         hero: true,
         animaltype: 'Turtle',
         weapon: 'Sai',
-        url:,
+        url: 'assets/tmnt/Raphael.jpg',
     },   
     {        
         id: 4,
@@ -30,7 +30,7 @@ module.exports = [
         hero: true,
         animaltype: 'Turtle',
         weapon: 'Bo',
-        url: ,
+        url: 'assets/tmnt/Donatello.jpg',
     },   
     {        
         id: 5,
@@ -38,7 +38,7 @@ module.exports = [
         hero: true,
         animaltype: 'Turtle',
         weapon: 'Nunchucka',
-        url:,
+        url: 'assets/tmnt/Michelangelo.jpg',
     },   
     {        
         id: 6,
@@ -46,7 +46,7 @@ module.exports = [
         hero: false,
         animaltype: 'Human',
         weapon: 'Bladed Gaunlets',
-        url:,
+        url: 'assets/tmnt/Shredder.jpg',
     },   
     {        
         id: 7,
@@ -54,15 +54,15 @@ module.exports = [
         hero: true,
         animaltype: 'Human',
         weapon: 'Microphone',
-        url:,
+        url: 'assets/tmnt/April-ONeil.jpg',
     },   
     {        
-        id: 8
+        id: 8,
         name: 'Casey Jones',
         hero: true,
         animaltype: 'Human',
         weapon: 'Sports Equipment',
-        url:,
+        url: 'assets/tmnt/Casey-Jones.jpg',
     },   
     {        
         id: 9,
@@ -70,15 +70,15 @@ module.exports = [
         hero: false,
         animaltype: 'Warthog',
         weapon: 'Machine Gun',
-        url:,
+        url: 'assets/tmnt/Bebop.jpg',
     },   
     {        
-        id: 10
+        id: 10,
         name: 'Rocksteady',
         hero: false,
-        animaltype: 'Rhinoceros,
+        animaltype: 'Rhinoceros',
         weapon: 'Machine Gun',
-        url:,
+        url: 'assets/tmnt/Rocksteady.jpg',
     }, 
     {        
         id: 11,
@@ -86,6 +86,6 @@ module.exports = [
         hero: false,
         animaltype: 'Alien Brain',
         weapon: 'Android Body',
-        url:  ,
+        url: 'assets/tmnt/Krang.jpg',
     }
 ];
