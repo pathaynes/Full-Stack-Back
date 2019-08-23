@@ -24,7 +24,7 @@ app.use(morgan());
 app.use(express.static('public'));
 
 
-app.get(' /*turtles ', (req, res) => {
+app.get('/api/turtles', (req, res) => {
     client.query(`
     SELECT
         id,
@@ -32,8 +32,8 @@ app.get(' /*turtles ', (req, res) => {
         animaltype,
         url,
         weapon,
-        hero,
-    FROM turtles
+        hero
+    FROM tmnt;
 
     `)
         .then(result => {

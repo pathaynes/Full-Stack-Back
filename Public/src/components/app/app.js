@@ -14,7 +14,7 @@ class App extends Component {
             <!-- header goes here -->
             <main>
                <p>TURTLE POWER</p>
-            <main>
+            </main>
         <div>   
      `;
     }
