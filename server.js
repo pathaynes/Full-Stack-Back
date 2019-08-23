@@ -1,16 +1,13 @@
 //env variables
 require('dotenv').config();
 
+//API Dependencies 
 const express = require('express');
 const cors = require('cors');
 const morgan = require('morgan');
 const pg = require('pg');
-// const superagent = ('superagent');
 
-
-//API Dependencies 
-
-
+//Database Client
 const Client = pg.Client;
 const client = new Client(process.env.DATABASE_URL);
 client.connect();
