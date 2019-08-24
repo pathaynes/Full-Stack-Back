@@ -21,7 +21,7 @@ client.connect()
             })
         );
     })
-    .then(() => {
+    .then(animaltypes => {
        //"promise all" does a parallel execution of async tasks
         return Promise.all(
             tmnt.map(tmnt => {
