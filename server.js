@@ -55,7 +55,7 @@ app.get('/api/turtles/:id', (req, res) => {
                 a.name as animaltype
                 FROM tmnt t
                 JOIN animaltypes a
-                ON t.animaltype = a.id
+                ON t.animaltype_id = a.id
                 WHERE t.id = $1
     `,
     [id]
