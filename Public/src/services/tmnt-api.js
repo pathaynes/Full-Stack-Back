@@ -29,5 +29,5 @@ export function addCharacter(character) {
 export function getTypes() {
     const url = `${URL}/types`;
     return fetch(url)
-        .then(reponse => response.json());
+        .then(response => response.json());
 }
