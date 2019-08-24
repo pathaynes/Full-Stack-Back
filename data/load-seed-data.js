@@ -28,13 +28,13 @@ client.connect()
                 const animaltype = animaltypes.find(animaltype => {
                     return animaltype.name === tmnt.animaltype;
                 });
-                const typeId = animaltype.id;
+                const typeID = animaltype.id;
 
                 return client.query(`
                    INSERT INTO tmnt (id, name, hero, animaltype, weapon, url)
                    VALUES ($1, $2, $3, $4, $5, $6);
                 `,
-                [tmnt.id, tmnt.name, tmnt.hero, typeId, tmnt.weapon, tmnt.url]);
+                [tmnt.id, tmnt.name, tmnt.hero, typeID, tmnt.weapon, tmnt.url]);
             })
         );
     })
