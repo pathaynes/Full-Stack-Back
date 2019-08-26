@@ -20,7 +20,7 @@ class TMNTForm extends Component {
 
             addCharacter(character)
                 .then((/*saved*/) => {
-                    // window.location = `tmnt-list.html`;
+                    window.location = `tmnt-list.html`;
                 })
                 .catch(err => {
                     console.log('character not saved :(', err);
