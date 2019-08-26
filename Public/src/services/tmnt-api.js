@@ -13,7 +13,6 @@ export function getCharacter(id) {
 } 
 
 export function addCharacter(character) {
-    console.log(character);
     const url = `${URL}/turtles`;
     return fetch(url, {
         method: 'POST',

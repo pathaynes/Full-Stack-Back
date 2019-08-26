@@ -6,7 +6,6 @@ class Turtle extends Component {
         const tmnt = this.props.turtle;
         return /*html*/`
     <li>
-       <a href="details.html?id=${tmnt.id}">
             <h2>${tmnt.name}</h2>
             <img class="character-img" src="${tmnt.url}">
         <div>
