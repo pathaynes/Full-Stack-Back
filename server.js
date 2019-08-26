@@ -24,16 +24,16 @@ app.use(express.static('Public'));
 app.get('/api/turtles', (req, res) => {
     client.query(`
     SELECT
-        id,
-        name,
-        animaltype,
-        url,
-        weapon,
-        hero
-    FROM tmnt 
-    JOIN animaltypes 
-    ON tmnt.animaltype = animaltypes.id
-    ORDER BY animaltype;
+        t.id,
+        t.name,
+        a.name as animaltype,
+        t.url,
+        t.weapon,
+        t.hero
+    FROM tmnt t
+    JOIN animaltypes a
+    ON t.animaltype = a.id
+    ORDER BY t.animaltype;
     ;
 
     `)
