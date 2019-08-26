@@ -31,10 +31,10 @@ client.connect()
                 const typeID = animaltype.id;
 
                 return client.query(`
-                   INSERT INTO tmnt (id, name, hero, animaltype, weapon, url)
-                   VALUES ($1, $2, $3, $4, $5, $6);
+                   INSERT INTO tmnt (name, hero, animaltype, weapon, url)
+                   VALUES ($1, $2, $3, $4, $5);
                 `,
-                [tmnt.id, tmnt.name, tmnt.hero, typeID, tmnt.weapon, tmnt.url]);
+                [tmnt.name, tmnt.hero, typeID, tmnt.weapon, tmnt.url]);
             })
         );
     })

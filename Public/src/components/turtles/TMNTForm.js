@@ -12,14 +12,15 @@ class TMNTForm extends Component {
             const character = {
                 name: formData.get('name'),
                 hero: formData.get('is-hero') === 'on',
-                animaltype: formData.get('animal-type-id'),
+                animaltype: +formData.get('animal-type-id'),
                 weapon: formData.get('weapon-id'),
                 url: formData.get('url'),
             };
 
+
             addCharacter(character)
                 .then((/*saved*/) => {
-                    window.location = `tmnt-list.html`;
+                    // window.location = `tmnt-list.html`;
                 })
                 .catch(err => {
                     console.log('character not saved :(', err);
@@ -31,7 +32,7 @@ class TMNTForm extends Component {
         const types = this.props.types;
         const optionsList = types.map(type => {
             return /*html*/`
-                <option value="${type.id}"> ${type.name}</option
+                <option value="${type.id}"> ${type.name}</option>
             `;
         });
 
@@ -53,7 +54,7 @@ class TMNTForm extends Component {
                 <label for="animal-type">Animal-Type </label>
                 <select id="animal-type" name="animal-type-id" required>
                     <option disabled selected>&lt:select a animal type&gt</option>
-                    <!-- ${optionsList.join('')} -->
+                    ${optionsList.join('')}
                 </select>
             </p>
             <p>

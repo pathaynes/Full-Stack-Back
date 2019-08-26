@@ -1,9 +1,7 @@
 const URL = '/api';
 
 export function getTurtles() {
-
     const url = `${URL}/turtles`;
-
     return fetch(url)
         .then(response => response.json());
 }
@@ -15,6 +13,7 @@ export function getCharacter(id) {
 } 
 
 export function addCharacter(character) {
+    console.log(character);
     const url = `${URL}/turtles`;
     return fetch(url, {
         method: 'POST',
@@ -22,9 +21,9 @@ export function addCharacter(character) {
             'Content-Type': 'application/json',  
         },
         body: JSON.stringify(character)
-    })
+    }) 
         .then(response => response.json());
-}
+} 
 
 export function getTypes() {
     const url = `${URL}/types`;

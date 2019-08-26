@@ -19,6 +19,7 @@ const PORT = process.env.PORT;
 app.use(cors());
 app.use(morgan());
 app.use(express.static('Public'));
+app.use(express.json());
 
 
 app.get('/api/turtles', (req, res) => {
@@ -79,9 +80,10 @@ app.get('/api/turtles/:id', (req, res) => {
 });
 app.post('/api/turtles', (req, res) => {
     const tmnt = req.body;
+    console.log(req.body);
     client.query(`
         INSERT INTO tmnt (name, animaltype, url, weapon, hero)
-        VALUES ($1, $2, $3, $4, $5,)
+        VALUES ($1, $2, $3, $4, $5)
         RETURNING *;
     `,
     [tmnt.name, tmnt.animaltype, tmnt.url, tmnt.weapon, tmnt.hero]
