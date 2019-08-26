@@ -18,7 +18,7 @@ client.connect()
                 id SERIAL PRIMARY KEY NOT NULL,
                 name VARCHAR(256) NOT NULL,
                 hero BOOLEAN NOT NULL,
-                animaltype VARCHAR(256) NOT NULL REFERENCES animaltypes(id),
+                animaltype INTEGER NOT NULL REFERENCES animaltypes(id),
                 weapon VARCHAR(256) NOT NULL,
                 url VARCHAR(256) NOT NULL
             );

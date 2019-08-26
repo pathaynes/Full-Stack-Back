@@ -24,15 +24,15 @@ app.use(express.static('Public'));
 app.get('/api/turtles', (req, res) => {
     client.query(`
     SELECT
-        t.id,
-        t.name,
-        a.animaltype,
-        t.url,
-        t.weapon,
-        t.hero
-    FROM tmnt t
-    JOIN animaltypes a
-    ON t.animaltype = a.id
+        id,
+        name,
+        animaltype,
+        url,
+        weapon,
+        hero
+    FROM tmnt 
+    JOIN animaltypes 
+    ON tmnt.animaltype = animaltypes.id
     ORDER BY animaltype;
     ;
 
@@ -51,12 +51,12 @@ app.get('/api/turtles/:id', (req, res) => {
     
     client.query(`
         SELECT
-                t.*
-                a.name as animaltype
-                FROM tmnt t
-                JOIN animaltypes a
-                ON t.animaltype_id = a.id
-                WHERE t.id = $1
+               t.*
+               animaltypes.name as animaltype
+        FROM   tmnt t
+        JOIN   animaltypes a
+        ON     t.animaltype = a.id
+        WHERE  t.id = $1
     `,
     [id]
     )
@@ -77,14 +77,14 @@ app.get('/api/turtles/:id', (req, res) => {
             });
         });
 });
-app.get('/api/turtles', (req, res) => {
+app.post('/api/turtles', (req, res) => {
     const tmnt = req.body;
     client.query(`
-        INSERT INTO tmnt (id, name, animaltype, url, weapon, hero)
-        VALUES ($1, $2, $3, $4, $5, $6)
+        INSERT INTO tmnt (name, animaltype, url, weapon, hero)
+        VALUES ($1, $2, $3, $4, $5,)
         RETURNING *;
     `,
-    [tmnt.name, tmnt.name, tmnt.animaltype, tmnt.url, tmnt.weapon, tmnt.hero]
+    [tmnt.name, tmnt.animaltype, tmnt.url, tmnt.weapon, tmnt.hero]
     )
         .then(result => {
             res.json(result.rows[0]);
